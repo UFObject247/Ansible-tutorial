@@ -9,4 +9,9 @@
   - name: install apache2 package
     apt:
       name: apache2
-      state: present
+      state: absent
+
+  - name: add php support for apache
+    apt:
+      name: libapache2-mod-php
+      state: absent
